@@ -19,8 +19,8 @@ test.describe('Data-Driven Tests for Demo App', () => {
       await page.click(`text=${navigation}`);
 
       // Step 4: Verify the task is in the specified column
-      const columnLocator = page.locator(`h2:has-text("${column}") + .flex.flex-col.gap-3`); // Locate the column by header text
-      const taskLocator = columnLocator.locator(`h3:has-text("${task}")`); // Locate the task by title
+      const columnLocator = page.locator(`h2:has-text("${column}") + .flex.flex-col.gap-3`);
+      const taskLocator = columnLocator.locator(`h3:has-text("${task}")`);
       await expect(taskLocator).toBeVisible();
 
       // Step 5: Verify tags
